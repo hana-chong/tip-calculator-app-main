@@ -121,7 +121,6 @@ span {
     color: hsl(186, 14%, 43%);
     font-size: .75em;
 }
-
 #amount-output {
     position: relative;
     color:rgb(61, 187, 187);
@@ -225,6 +224,18 @@ button {
 }
 #output-txt2 {
     margin-top: 15px;
+}
+#amount-output {
+    position: relative;
+    color:rgb(61, 187, 187);
+    font-size: 2.5em;
+    left: 40%;
+}
+#total-output {
+    position: relative;
+    color: rgb(61, 187, 187);
+    font-size: 2.5em;
+    left: 40%;
 }
 .reset-btn {
     padding: 7px 122px;
