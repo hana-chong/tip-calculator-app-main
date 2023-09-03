@@ -1,0 +1,237 @@
+* {
+    font-size: 24px;
+    font-family: 'Space Mono', monospace;
+    margin:0;
+}
+body {
+    background-color: hsl(185, 41%, 84%);
+}
+.container {
+    background-color: white;
+    max-width: 100%;
+    border-radius: 20px;
+    padding: 15px;
+}
+h1 {
+    color:hsl(186, 14%, 43%);
+    text-align: center;
+    font-weight: bold;
+    margin: 20px auto;
+}
+p {
+    font-size: .75em;
+    color:hsl(186, 14%, 43%);
+    margin: 7.5px;
+    margin-left:20px;
+}
+#error-ppl, #error-bill, #error-tip {
+    display: none;
+    float: right;
+    font-size: 0.8em;
+    color: red;
+}
+input {
+    background-color: hsl(189, 41%, 97%);
+    border: none;
+    border-radius: 5px;
+    color: hsl(183, 100%, 15%);
+    text-align: right;
+    margin-bottom: 10px;
+    max-width: 290px;
+    margin-left: 20px;
+    height: 40px;
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  display: none;
+}
+input:focus {
+    outline:rgb(52, 175, 175) solid 2px;
+}
+.dollar-img{
+    position: absolute;
+    top: 177.5px;
+    left: 50px;
+}
+.bill-input {
+    width: 100%;
+}
+.tip-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    margin: 0 15px;
+    justify-items: center;
+    row-gap: 15px;
+    margin-bottom: 15px;
+}
+button {
+    background-color: hsl(183, 100%, 15%);
+    border-radius: 5px;
+    color: white;
+    border: none;
+    width: 140px;
+    height: 50px;
+    font-weight: bold;
+}
+.active {
+    background-color:rgb(61, 187, 187);
+}
+button:hover {
+    background-color: rgb(61, 187, 187);
+    color: hsl(183, 100%, 15%);
+}
+button:active{
+    background-color: rgb(115, 212, 212);
+}
+.custom-btn {
+    background-color: hsl(189, 41%, 97%);
+    color:hsl(186, 14%, 43%);
+}
+.custom-input {
+    display:none;
+    height: 50px;
+    width: 140px;
+    margin-left: 0;
+}
+.ppl-img {
+    position: absolute;
+    left: 50px;
+    top:501px;
+}
+.ppl-input {
+    width: 100%;
+}
+.output-container {
+    background-color: hsl(183, 100%, 15%);
+    border-radius: 10px;
+    max-width: 305px;
+    margin-left: 20px;
+    margin-top: 10px;
+    padding-bottom: 50px;
+    padding-top: 10px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+.output-container p {
+    color: white;
+}
+span {
+    color: hsl(186, 14%, 43%);
+    font-size: .75em;
+}
+
+#amount-output {
+    position: relative;
+    color:rgb(61, 187, 187);
+    font-size: 2em;
+    left: 50%;
+}
+#total-output {
+    position: relative;
+    color: rgb(61, 187, 187);
+    font-size: 2em;
+    left: 50%;
+}
+.reset-btn {
+    background-color: rgb(61, 187, 187);
+    color:  hsl(183, 100%, 15%);
+    text-decoration: none;
+    border-radius: 5px;
+    padding: 4px 100px;
+    position: absolute;
+    font-size: .9em;
+    margin-left: 19px;
+    top: 225px;
+
+}
+.reset-btn:hover {
+    background-color: rgb(115, 212, 212);
+}
+.reset-btn:active {
+    background-color: hsl(189, 41%, 97%);
+}
+
+@media only screen and (min-width: 600px) {
+h1 {
+        margin: 50px auto;
+    }
+.container {
+        max-width: 875px;
+        height: 450px;
+        margin: 0 auto;
+        display: flex;
+}
+.left {
+    flex-grow: 1;
+    flex-direction: column;
+}
+.bill-container {
+    margin: 25px 0 0 20px;
+    position: relative;
+}
+.dollar-img {
+    position: absolute;
+    top: 62%; 
+    transform: translateY(-50%);
+    left: 35px; 
+    z-index: 1;
+}
+.bill-input {
+    padding: 5px 45px;
+}
+.tip-container{
+    grid-template-columns: repeat(3, 1fr);
+    row-gap: 10px;
+    column-gap: 10px;
+    margin:0 10px 0 40px;
+    justify-items: left;
+    width: 40%;
+}
+.select-txt {
+    margin-top: 30px;
+    margin-left: 40px;
+}
+button {
+    width: 120px;
+}
+.custom-input {
+    width: 118px;
+}
+.ppl-container {
+    margin-left: 20px;
+    margin-top: 40px;
+    position: relative;
+}
+.ppl-input {
+    padding: 5px 45px;
+}
+.ppl-img {
+    position: absolute; 
+    top: 62%;
+    transform: translateY(-50%);
+    left: 35px; 
+    z-index: 1;
+}
+.output-container {
+    margin: 10px;
+    width: 100%;
+    padding: 50px;
+    max-width: 40%;
+}
+.output-txt {
+    margin-left: 0;
+}
+#output-txt2 {
+    margin-top: 15px;
+}
+.reset-btn {
+    padding: 7px 122px;
+    background-color: hsl(187, 50%, 26%);
+    margin-left: 0;
+    top: 0;
+    position: absolute;
+    margin: 350px auto;
+}
+}

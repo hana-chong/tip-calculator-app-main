@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@700&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="style.css">
+  <title>Frontend Mentor | Tip calculator app</title>
+</head>
+<body>
+<header>
+  <h1>SPLI<br>TTER</h1>
+</header>
+<div class="container">
+  <div class="left">
+  <div class="bill-container">
+  <p>Bill<small id="error-bill">Can't be 0.</small></p>
+  <img src="./images/icon-dollar.svg" alt="dollar sign" class="dollar-img">
+  <input type="number" class="bill-input"> 
+  </div>
+  <p class="select-txt">Select Tip %<small id="error-tip">Must choose an option.</small></p>
+<div class="tip-container">
+  <button class="tip-btn" id="five-btn">5%</button>
+  <button class="tip-btn" id="ten-btn">10%</button>
+  <button class="tip-btn" id="fifteen-btn">15%</button>
+  <button class="tip-btn" id="twentyfive-btn">25%</button>
+  <button class="tip-btn" id="fifty-btn">50%</button>
+  <button class="tip-btn" id="custom-btn">Custom</button>
+  <input class="custom-input" type="number">
+</div>
+    <div class="ppl-container">
+  <p>Number of People<small id="error-ppl">Can't be 0.</small></p>
+    <img src="./images/icon-person.svg" alt="icon of a person" class="ppl-img">
+    <input type="number" class="ppl-input">
+    </div>
+    </div>
+    <div class="output-container">
+  <p class="output-txt">Tip Amount<br>
+  <span>/ person</span><strong id="amount-output"></strong></p>
+
+  <p class="output-txt" id="output-txt2"><br>Total<br>
+  <span>/ person</span><strong id="total-output"></strong></p>
+  <a href="index.html" class="reset-btn">RESET</a>
+    </div>
+</div>
+<script src="script.js"></script>
+</body>
+</html>
