@@ -84,9 +84,14 @@ function calculate () {
     validateInput();
     validateTip();
 
+    let tipAmount = 0;
+    let totalPerPerson = 0;
+
     if (isValid) {
         const billAmount = parseFloat(billInput.value);
         const numOfPeople = parseFloat(pplNum.value);
+        
+        if (!isNaN(numOfPeople) && numOfPeople > 0) {
         let tipPercentage;
         if (tipFive.classList.contains("active")) {
             tipPercentage = 5;
@@ -103,17 +108,15 @@ function calculate () {
         } else {
             return;
         }
-        const tipAmount = (billAmount * tipPercentage) / 100;
-        const totalPerPerson = (billAmount / pplNum + tipAmount);
+
+        tipAmount = (billAmount * (tipPercentage / 100)) / numOfPeople;
+        totalPerPerson = (billAmount / numOfPeople) + tipAmount;
+    }
+}
         document.getElementById("amount-output").textContent = `$${tipAmount.toFixed(2)}`;
         document.getElementById("total-output").textContent = `$${totalPerPerson.toFixed(2)}`;
         document.getElementById("amount-output").style.display = "inline";
         document.getElementById("total-output").style.display = "inline";
-    }else {
-        // If any of the required inputs are invalid, hide the output elements
-        document.getElementById("amount-output").style.display = "none";
-        document.getElementById("total-output").style.display = "none";
-      }
 }
 
 billInput.addEventListener("input", calculate);
