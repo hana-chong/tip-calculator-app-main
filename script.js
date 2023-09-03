@@ -104,7 +104,7 @@ function calculate () {
             return;
         }
         const tipAmount = (billAmount * tipPercentage) / 100;
-        const totalPerPerson = (billAmount + tipAmount);
+        const totalPerPerson = (billAmount / pplNum + tipAmount);
         document.getElementById("amount-output").textContent = `$${tipAmount.toFixed(2)}`;
         document.getElementById("total-output").textContent = `$${totalPerPerson.toFixed(2)}`;
         document.getElementById("amount-output").style.display = "inline";
