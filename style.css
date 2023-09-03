@@ -159,7 +159,7 @@ h1 {
 .container {
         max-width: 875px;
         height: 450px;
-        margin: 0 auto;
+        margin: 0 auto 125px;
         display: flex;
 }
 .left {
